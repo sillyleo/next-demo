@@ -2,7 +2,18 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    urlImports: [
+      "https://framer.com/m/",
+      "https://framerusercontent.com/",
+      "https://ga.jspm.io/",
+      "https://jspm.dev/",
+      "https://unpkg.com/",
+      "https://esm.sh/",
+    ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = {
+  exportTrailingSlash: true,
+  ...nextConfig,
+};
